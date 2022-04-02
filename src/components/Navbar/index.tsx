@@ -7,15 +7,21 @@ export const Navbar = () => (
   <>
     <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-        <Box>Logo</Box>
+        <Box fontFamily={"serif"}>BLENDED BIRCH</Box>
 
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
             <Link as={ReachLink} to="/">
-              Home
+              Portfolio
             </Link>
             <Link as={ReachLink} to="/about-me">
               About me
+            </Link>
+            <Link as={ReachLink} to="/prints">
+              Prints
+            </Link>
+            <Link as={ReachLink} to="/contact">
+              Contact
             </Link>
             <ColorModeSwitcher justifySelf="flex-end" />
           </Stack>

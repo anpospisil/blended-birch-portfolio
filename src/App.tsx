@@ -6,16 +6,18 @@ import {
 } from "@chakra-ui/react"
 import {Navbar} from "./components/Navbar"
 
-import { Home } from "./pages/Home"
+import { Portfolio } from "./pages/Portfolio"
 import { AboutMe } from "./pages/AboutMe"
+import { ContactMe } from "./pages/ContactMe"
 import { Router, RouteComponentProps } from "@reach/router";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
      <Navbar />
   <Router>
-    <RouterPage path="/" pageComponent={<Home />} />
+    <RouterPage path="/" pageComponent={<Portfolio />} />
     <RouterPage path="/about-me" pageComponent={<AboutMe />} />
+    <RouterPage path="/contact" pageComponent={<ContactMe />} />
   </Router>
   </ChakraProvider>
 )
