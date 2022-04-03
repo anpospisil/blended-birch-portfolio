@@ -18,7 +18,7 @@ export default function ContactForm() {
 
   // const isError = input === ''
   return (
-    <Box textAlign="center" fontSize="xl">
+    <Box w={[300, 400, 500]} textAlign="center" fontSize="xl">
       <VStack spacing={6}>
         <FormControl isRequired>
           <FormLabel htmlFor="name">Name</FormLabel>

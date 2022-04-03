@@ -1,0 +1,21 @@
+.scrollable{
+    display: flex;
+}
+.styles-module_slider__o0fqa  {
+  display: flex;
+  gap: 1rem;
+  min-height: 600px;
+}
+.c-image {
+    width: auto;
+    
+}
+
+@media only screen and (max-width: 991px) {
+  .styles-module_slider__o0fqa {
+    height: auto;
+    min-height: 60vh;
+    overflow: hidden;
+    width: auto;
+}
+}

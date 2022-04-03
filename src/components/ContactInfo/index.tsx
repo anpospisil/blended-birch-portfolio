@@ -3,7 +3,7 @@ import insta from "../../instagram-logo.png"
 import tiktok from "../../tik-tok.png"
 export const ContactInfo = () => (
   <Box textAlign="center" fontSize="xl">
-    <Grid mt={20} minH="100vh" p={3}>
+    <Grid mt={4} minH="100vh" p={3}>
       <VStack spacing={6}>
         <Text textAlign={"left"}>
           E: <Link href="mailto:blendedbirch@mail.com">blendedbirch@mail.com</Link>

@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
-import { Box, Flex, Link, useColorModeValue, Stack } from "@chakra-ui/react";
+import { Box, Flex, Link, useColorModeValue, Stack, Image, HStack } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { Link as ReachLink } from "@reach/router";
-
+import bbLogo from "../../bb-logo.jpeg"
 export const Navbar = () => (
   <>
     <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-        <Box fontFamily={"serif"}>BLENDED BIRCH</Box>
+        <HStack fontFamily={"serif"}><Image w={10} src={bbLogo} /><Box>BLENDED BIRCH</Box></HStack>
 
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
