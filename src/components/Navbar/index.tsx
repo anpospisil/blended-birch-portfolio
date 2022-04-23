@@ -5,8 +5,8 @@ import { Link as ReachLink } from "@reach/router";
 import bbLogo from "../../bb-logo.jpeg"
 export const Navbar = () => (
   <>
-    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      
+      <Flex bg={useColorModeValue("gray.100", "gray.900")} px={4} width="100%" h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack fontFamily={"serif"}><Image w={10} src={bbLogo} /><Box>BLENDED BIRCH</Box></HStack>
 
         <Flex alignItems={"center"}>
@@ -27,6 +27,6 @@ export const Navbar = () => (
           </Stack>
         </Flex>
       </Flex>
-    </Box>
+   
   </>
 );

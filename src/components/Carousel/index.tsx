@@ -1,13 +1,189 @@
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
-// import { Item } from './yourItem';
-import { Image } from "@chakra-ui/react";
-import "../../App.css"
+import React from "react";
+import Gallerys from "react-photo-gallery";
 
-export const Carousel = () => (
-    <ScrollingCarousel className='scrollable'>
-    <Image className='c-image' src="https://www.w3schools.com/w3css/img_lights.jpg" />
-    <Image className='c-image' src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" />
-    <Image className='c-image' src="https://www.w3schools.com/w3css/img_lights.jpg" />
-    <Image className='c-image' src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" />
-  </ScrollingCarousel>
-);
+const photo = [
+  {
+    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    width: 1,
+    height: 1
+  },
+  {
+    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/u9cG4cuJ6bU/4927x1000",
+    width: 4927,
+    height: 1000
+  },
+
+  {
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/XiDA78wAZVw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/x8xJpClTvR0/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/qGQNmBE7mYw/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NuO6iTBkHxE/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/pF1ug8ysTtY/600x400",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/A-fubu9QJxE/800x533",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/5P91SF0zNsI/740x494",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    width: 1,
+    height: 1
+  },
+  {
+    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/u9cG4cuJ6bU/4927x1000",
+    width: 4927,
+    height: 1000
+  },
+
+  {
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/XiDA78wAZVw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/x8xJpClTvR0/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/qGQNmBE7mYw/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NuO6iTBkHxE/800x599",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/pF1ug8ysTtY/600x400",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/A-fubu9QJxE/800x533",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/5P91SF0zNsI/740x494",
+    width: 3,
+    height: 4
+  }
+];
+const Content = {
+  height: "1200px",
+  display: "inline-flex",
+  float: "left",
+  width: "100%",
+  img: {
+    borderRadius: "10px",
+   
+  }
+  
+};
+
+export const Picture = (props:any) => {
+  const { Content } = props;
+    return (
+      <div style={Content}>
+        <Gallerys direction={"row"} margin={40} photos={photo} />
+      </div>
+    );
+    }
+
+// export default Picture;

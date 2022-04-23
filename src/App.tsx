@@ -1,6 +1,7 @@
 import * as React from "react"
 import {
   ChakraProvider,
+  Container,
   theme,
   
 } from "@chakra-ui/react"
@@ -14,11 +15,13 @@ import { Router, RouteComponentProps } from "@reach/router";
 export const App = () => (
   <ChakraProvider theme={theme}>
      <Navbar />
-  <Router>
+     <Container as="main" maxWidth="100%">
+  <Router >
     <RouterPage path="/" pageComponent={<Portfolio />} />
     <RouterPage path="/about-me" pageComponent={<AboutMe />} />
     <RouterPage path="/contact" pageComponent={<ContactMe />} />
   </Router>
+  </Container>
   </ChakraProvider>
 )
 
