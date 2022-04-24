@@ -1,4 +1,5 @@
 .react-photo-gallery--gallery div {
   overflow-x: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   flex-flow: nowrap !important;
 }

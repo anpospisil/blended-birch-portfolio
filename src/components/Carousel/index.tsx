@@ -208,10 +208,46 @@ const Content = {
   
 };
 
+
 export const Picture = (props:any) => {
-  const { Content } = props;
+const { Content } = props;
+
+const slider:any = document.querySelector('.items div div');
+let isDown = false;
+let startX:any;
+let scrollLeft:any;
+if(slider){
+ 
+slider.addEventListener("wheel", (e:any) => {
+    e.preventDefault();
+    slider.scrollLeft += e.deltaY;
+});
+slider.addEventListener('mousedown', (e:any) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e:any) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+}
+
     return (
-      <div style={Content}>
+      <div className="items" style={Content}>
         <Gallerys direction={"row"} margin={40} photos={photo} />
       </div>
     );
