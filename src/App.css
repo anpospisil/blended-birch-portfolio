@@ -1,5 +1,19 @@
-.react-photo-gallery--gallery div {
-  overflow-x: scroll;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  flex-flow: nowrap !important;
+body{
+  overflow-x: hidden;
 }
+.galleryContainer {
+    overflow-x: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    width: 100%;
+  }
+.react-photo-gallery--gallery div {
+  flex-flow: nowrap !important;
+  height: 80vh;
+}
+.items{
+  height: auto;
+  display: inline-flex;
+  float: left;
+  width: 100%;  
+};
+

@@ -3,8 +3,8 @@ import Gallerys from "react-photo-gallery";
 const photo = [
   {
     loading:"lazy",
-    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    width: 1,
+    src: "https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg",
+    width: 2,
     height: 1
   },
   {
@@ -34,14 +34,13 @@ const photo = [
   {
     loading:"lazy",
     src: "https://source.unsplash.com/u9cG4cuJ6bU/4927x1000",
-    width: 4927,
-    height: 1000
+    width: 5,
+    height: 2
   },
-
   {
     loading:"lazy",
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
     width: 3,
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
     height: 4
   },
   {
@@ -196,61 +195,11 @@ const photo = [
     height: 4
   }
 ];
-const Content = {
-  height: "1200px",
-  display: "inline-flex",
-  float: "left",
-  width: "100%",
-  img: {
-    borderRadius: "10px",
-   
-  }
-  
-};
 
+export const Picture = () => {
 
-export const Picture = (props:any) => {
-const { Content } = props;
-
-const slider:any = document.querySelector('.items div div');
-let isDown = false;
-let startX:any;
-let scrollLeft:any;
-if(slider){
- 
-slider.addEventListener("wheel", (e:any) => {
-    e.preventDefault();
-    slider.scrollLeft += e.deltaY;
-});
-slider.addEventListener('mousedown', (e:any) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e:any) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
-});
-}
-
-    return (
-      <div className="items" style={Content}>
+return (
         <Gallerys direction={"row"} margin={40} photos={photo} />
-      </div>
+      
     );
     }
-
-// export default Picture;
