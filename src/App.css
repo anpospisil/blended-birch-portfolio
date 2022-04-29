@@ -2,8 +2,9 @@ body{
   overflow-x: hidden;
 }
 .galleryContainer {
+  white-space: nowrap;
     overflow-x: scroll;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden; 
     width: 100%;
   }
 .react-photo-gallery--gallery div {
