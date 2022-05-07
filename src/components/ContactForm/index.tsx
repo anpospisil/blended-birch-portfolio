@@ -2,53 +2,65 @@ import { useState } from "react";
 import {
   Box,
   VStack,
-  Grid,
-  FormControl,
+  
   Input,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Textarea,
+ 
+  Button
 } from "@chakra-ui/react";
 
+import { useForm } from "react-hook-form";
+
+
 export default function ContactForm() {
-  // const [input, setInput] = useState('')
-
-  // const handleInputChange = (e:any) => setInput(e.target.value)
-
-  // const isError = input === ''
+  const { register, handleSubmit, formState: { errors } } = useForm();
+ 
+  const onSubmit = (data:any) => {
+    console.log(data);
+   };
+ 
+  
   return (
     <Box w={[300, 400, 500]} textAlign="center" fontSize="xl">
-      <VStack spacing={6}>
-        <FormControl isRequired>
-          <FormLabel htmlFor="name">Name</FormLabel>
-          <Input id="name" placeholder="name" />
-        </FormControl>
+      <form onSubmit={handleSubmit(onSubmit)}>
+      <VStack spacing={6} >
+      
+         <Input
+           type="text"
+           placeholder="First name"
+           {...register("firstname", {
+             required: "Please enter first name",
+             minLength: 3,
+             maxLength: 80
+           })}
+         />
+         <Input
+           type="text"
+           placeholder="Last name"
+           {...register("lastname", {
+             required: "Please enter Last name",
+             minLength: 3,
+             maxLength: 100
+           })}
+         />
+         <Input
+           type="email"
+           placeholder="email"
+           {...register("email", {
+             required: "Please enter email",
+           })}
+         />
+         <Button
+           borderRadius="md"
+           bg="cyan.600"
+           _hover={{ bg: "cyan.200" }}
+           variant="ghost"
+           type="submit"
+         >
+           Submit
+         </Button>
 
-        <FormControl
-          //    isInvalid={isError}
-          isRequired
-        >
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input
-            id="email"
-            type="email"
-            //   onChange={handleInputChange} value={input}
-          />
-          {/* {!isError ? "" :
-  <FormErrorMessage>Email is required.</FormErrorMessage>
-        } */}
-        </FormControl>
-        <FormControl isRequired>
-          <FormLabel htmlFor="subject">Subject</FormLabel>
-          <Input id="subject" placeholder="subject" />
-        </FormControl>
-        <FormControl isRequired>
-          <FormLabel htmlFor="message">Message</FormLabel>
-
-          <Textarea id="message" placeholder="message" size="sm" />
-        </FormControl>
       </VStack>
+      </form>
     </Box>
   );
 }

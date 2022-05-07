@@ -199,7 +199,7 @@ const photo = [
 export const Picture = () => {
 
 return (
-        <Gallerys direction={"row"} margin={40} photos={photo} />
+        <Gallerys direction={"row"} margin={20} photos={photo} />
       
     );
     }

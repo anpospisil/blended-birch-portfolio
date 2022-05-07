@@ -1,4 +1,5 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
+
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 import { Picture } from "../../components/Carousel";
 
@@ -17,14 +18,15 @@ export const Portfolio = () => {
 function handleForwardClick() {
   forwardToEnd(scrollRef)
 }
+const [isSmallerThan991] = useMediaQuery('(max-width: 991px)')
 
   return (
     <Box>    
-      <Box className="galleryContainer" ref={scrollRef}  mt={20}>
+      <Box className="galleryContainer"  ref={scrollRef} h={"100%"} mt={10}>
       <Picture  />
       </Box>
-      <ArrowLeftIcon onClick={handleBackClick}/>
-      <ArrowRightIcon onClick={handleForwardClick}></ArrowRightIcon>
+      {/* <ArrowLeftIcon onClick={handleBackClick}/>
+      <ArrowRightIcon onClick={handleForwardClick}></ArrowRightIcon> */}
       </Box>
   );
   };

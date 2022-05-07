@@ -1,3 +1,4 @@
+
 body{
   overflow-x: hidden;
 }
@@ -5,16 +6,23 @@ body{
   white-space: nowrap;
     overflow-x: scroll;
     overflow-x: hidden; 
+    height: 100%;
     width: 100%;
   }
 .react-photo-gallery--gallery div {
   flex-flow: nowrap !important;
-  height: 80vh;
+  height: 100%;
 }
-.items{
+.react-photo-gallery--gallery div img{
+  height: 80vh;
+  width: 100%;
+  
+}
+
+/* .items{
   height: auto;
   display: inline-flex;
   float: left;
   width: 100%;  
-};
+}; */
 
