@@ -6,11 +6,10 @@ import bbLogo from "../../bb-logo.jpeg"
 export const Navbar = () => (
   <>
       
-      <Flex bg={useColorModeValue("gray.100", "gray.900")} px={4} width="100%" h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Flex bg={useColorModeValue("gray.100", "gray.900")} px={4} mb={20} w='100%' h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack fontFamily={"serif"}><Image w={10} src={bbLogo} /><Box>BLENDED BIRCH</Box></HStack>
-
         <Flex alignItems={"center"}>
-          <Stack direction={"row"} spacing={7}>
+          <Stack direction={"row"} alignItems={"center"} spacing={7}>
             <Link as={ReachLink} to="/">
               Portfolio
             </Link>

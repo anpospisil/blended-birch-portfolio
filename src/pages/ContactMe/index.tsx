@@ -3,7 +3,7 @@ import { ContactInfo } from "../../components/ContactInfo"
 import ContactForm from "../../components/ContactForm"
 export const ContactMe = () => (
   <Box textAlign="center" fontSize="xl">
-    <Grid mt={20} minH="100vh" p={3}>
+    <Grid minH="100vh" p={3}>
       <VStack spacing={8}>
         <Text textAlign={"left"}>
           Contact

@@ -3,7 +3,7 @@ import "./App.css"
 import {
   ChakraProvider,
   Container,
-  theme,
+theme
   
 } from "@chakra-ui/react"
 import {Navbar} from "./components/Navbar"
@@ -11,21 +11,20 @@ import {Navbar} from "./components/Navbar"
 import { Portfolio } from "./pages/Portfolio"
 import { AboutMe } from "./pages/AboutMe"
 import { ContactMe } from "./pages/ContactMe"
+// import { Prints } from "./pages/Prints"
 import { Router, RouteComponentProps } from "@reach/router";
+import { extendTheme } from "@chakra-ui/react"
+
 
 export const App = () => (
   <ChakraProvider theme={theme}>
      <Navbar />
-     <Container as="main" maxWidth="100%">
-  <Router >
-    <RouterPage path="/" pageComponent={<Portfolio />} />
-    <RouterPage path="/about-me" pageComponent={<AboutMe />} />
-    <RouterPage path="/contact" pageComponent={<ContactMe />} />
-  </Router>
-  </Container>
+     <Router primary={false}>
+      <Portfolio path="/" />
+      <AboutMe path="about-me" />
+      <ContactMe path="contact" />
+    </Router>
+    
   </ChakraProvider>
 )
 
-const RouterPage = (
-  props: { pageComponent: JSX.Element } & RouteComponentProps
-) => props.pageComponent;

@@ -23,7 +23,7 @@ const [isSmallerThan991] = useMediaQuery('(max-width: 991px)')
   return (
     <Box>    
       <Box className="galleryContainer"  ref={scrollRef} h={"100%"} mt={10}>
-      <Picture  />
+      <Picture />
       </Box>
       {/* <ArrowLeftIcon onClick={handleBackClick}/>
       <ArrowRightIcon onClick={handleForwardClick}></ArrowRightIcon> */}
