@@ -3,12 +3,12 @@ import insta from "../../instagram-logo.png"
 import tiktok from "../../tik-tok.png"
 export const ContactInfo = () => (
   <Box textAlign="center" fontSize="xl">
-    <Grid mt={4} minH="100vh" p={3}>
+    <Grid mt={4} minH="auto" p={3}>
       <VStack spacing={6}>
         <Text textAlign={"left"}>
           E: <Link href="mailto:blendedbirch@mail.com">blendedbirch@mail.com</Link>
         </Text>
-        <Text>Follow me on:</Text>
+        <Text>Follow me:</Text>
         <HStack spacing='16px' >
             <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={insta}/></Link>
             <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={tiktok}/></Link>

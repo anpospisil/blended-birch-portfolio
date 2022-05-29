@@ -11,8 +11,7 @@ import useScript from "./jotform"
 import JotformEmbed from 'react-jotform-embed';
 
 export default function ContactForm() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
- 
+  const { register, handleSubmit } = useForm();
   // const onSubmit = (data:any) => {
   //   console.log(data);
   //  };
