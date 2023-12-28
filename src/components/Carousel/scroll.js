@@ -35,7 +35,6 @@ export function useHorizontalScroll(scroll) {
           const scroll = x - startX;
           el.scrollLeft = scrollLeft - scroll;
         });
-
         // Add the event listeners
         el.addEventListener('mousedown', startDragging, false);
         el.addEventListener('mouseup', stopDragging, false);

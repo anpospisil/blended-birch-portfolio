@@ -24,7 +24,7 @@ export const Navbar = () => {
   return (
    
     <Flex
-      bg={useColorModeValue("gray.100", "gray.900")}
+      bg={useColorModeValue("#D6FFE9", "#25332B")}
       px={4}
       mb={20}
       w="100%"

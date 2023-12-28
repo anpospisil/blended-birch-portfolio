@@ -6,15 +6,17 @@ body{
   white-space: nowrap;
     overflow-x: scroll;
     overflow-x: hidden; 
+    scroll-snap-type: x proximity;
     height: 100%;
     width: 100%;
   }
 .react-photo-gallery--gallery div {
   flex-flow: nowrap !important;
   height: 100%;
+  align-items: center;
 }
 .react-photo-gallery--gallery div img{
-  height: 80vh;
+  height: 100%;
   width: 100%;
   
 }
