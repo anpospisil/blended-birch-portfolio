@@ -2,7 +2,7 @@
 body{
   overflow-x: hidden;
 }
-.galleryContainer {
+/* .galleryContainer {
   white-space: nowrap;
     overflow-x: scroll;
     overflow-x: hidden; 
@@ -19,7 +19,7 @@ body{
   height: 100%;
   width: 100%;
   
-}
+} */
 
 /* .items{
   height: auto;
