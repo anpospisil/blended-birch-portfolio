@@ -47,11 +47,11 @@ export const Navbar = () => {
           <Link as={ReachLink} to="/about-me">
             About me
           </Link>
-          <Link as={ReachLink} to="/prints">
-            Prints
-          </Link>
           <Link as={ReachLink} to="/contact">
             Contact
+          </Link>
+          <Link as={ReachLink} to="/Shop">
+            Shop
           </Link>
         </Stack>
       </Flex>
@@ -89,11 +89,12 @@ export const Navbar = () => {
           <Link as={ReachLink} to="/about-me">
             About me
           </Link>
-          <Link as={ReachLink} to="/prints">
-            Prints
-          </Link>
+         
           <Link as={ReachLink} to="/contact">
             Contact
+          </Link>
+          <Link as={ReachLink} to="/shop">
+            Shop
           </Link>
         </Flex>
       </Flex>
