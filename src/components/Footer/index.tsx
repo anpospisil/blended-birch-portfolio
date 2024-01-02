@@ -12,6 +12,7 @@ import {
   Stack,
   Image,
   HStack,
+  VStack,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { Link as ReachLink } from "@reach/router";
@@ -19,32 +20,54 @@ import { Link as ReachLink } from "@reach/router";
 import bbLogo from "../../bb-logo.jpeg";
 
 export const Footer = () => {
-  const [display, changeDisplay] = useState("none");
+  
   return (
 
       <Flex
       bg={useColorModeValue("#D6FFE9", "#25332B")}
-      px={4}
-      mb={20}
+      px={[4,4,4,14]}
+      position="absolute"
+      bottom="0"
       w="100%"
-      h={16}
+      h="15em"
       alignItems={"center"}
-      justifyContent={"space-between"}
+     
    
       >
-        <Stack direction={"row"} alignItems={"center"} spacing={7}>
-          <Link as={ReachLink} to="/">
+        <Stack direction={"row"} alignItems={"flex-start"}  w="100%" justifyContent={"space-between"} spacing={7}>
+          <VStack alignItems={"flex-start"}>
+          <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/">
             Portfolio
           </Link>
-          <Link as={ReachLink} to="/about-me">
+          <Link as={ReachLink} to="/">
+            Digital Painting
+          </Link>
+          <Link as={ReachLink} to="/">
+            Watercolor
+          </Link>
+          
+         </VStack>
+          <VStack>
+          <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/about-me">
             About me
           </Link>
-          <Link as={ReachLink} to="/contact">
+          </VStack>
+          <VStack>
+          <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/contact">
             Contact
           </Link>
-          <Link as={ReachLink} to="/Shop">
+          </VStack>
+          <VStack>
+          <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/Shop">
             Shop
           </Link>
+          </VStack>
+          <VStack>
+          <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/Shop">
+            Socials
+          </Link>
+          </VStack>
         </Stack>
+
       </Flex>
 )}

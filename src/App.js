@@ -3,7 +3,8 @@ import "./App.css"
 import {
   ChakraProvider,
   Container,
-theme
+theme,
+extendTheme
   
 } from "@chakra-ui/react"
 import {Navbar} from "./components/Navbar"
@@ -13,7 +14,6 @@ import { AboutMe } from "./pages/AboutMe"
 import { ContactMe } from "./pages/ContactMe"
 // import { Prints } from "./pages/Prints"
 import { Router, RouteComponentProps } from "@reach/router";
-import { extendTheme } from "@chakra-ui/react"
 
 
 export const App = () => (

@@ -25,7 +25,7 @@ export const Navbar = () => {
    
     <Flex
       bg={useColorModeValue("#D6FFE9", "#25332B")}
-      px={4}
+      px={[4, 4, 4, 14]}
       mb={20}
       w="100%"
       h={16}
@@ -34,8 +34,12 @@ export const Navbar = () => {
     >
       {/* Logo */}
       <HStack justifySelf={"flex-start"} fontFamily={"serif"}>
+        <Link as={ReachLink} to="/">
         <Image w={10} src={bbLogo} />
+        </Link>
+        <Link   _hover={{ textDecoration: "none" }} as={ReachLink} to="/">
         <Box>BLENDED BIRCH</Box>
+        </Link> 
       </HStack>
 
       {/* Desktop */}

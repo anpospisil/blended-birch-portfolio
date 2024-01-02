@@ -28,7 +28,10 @@ const [isSmallerThan991] = useMediaQuery('(max-width: 991px)')
     //   {/* <ArrowLeftIcon onClick={handleBackClick}/>
     //   <ArrowRightIcon onClick={handleForwardClick}></ArrowRightIcon> */}
     //   </Box>
-    <Box>
+    <Box 
+    px={[4, 4, 4, 14]}
+    mb={20}
+    >
       <ImageList />
     </Box>
   );

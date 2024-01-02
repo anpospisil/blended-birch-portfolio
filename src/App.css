@@ -1,10 +1,14 @@
 
 body{
   overflow-x: hidden;
-
+  position: relative;
+  min-height: 100vh!important;
 }
 .css-zjq1i3{
   margin: auto;
+}
+#root{
+  padding-bottom: 15em;
 }
 
 /* .galleryContainer {
