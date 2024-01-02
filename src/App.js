@@ -7,7 +7,7 @@ theme
   
 } from "@chakra-ui/react"
 import {Navbar} from "./components/Navbar"
-
+import {Footer} from "./components/Footer"
 import { Portfolio } from "./pages/Portfolio"
 import { AboutMe } from "./pages/AboutMe"
 import { ContactMe } from "./pages/ContactMe"
@@ -24,6 +24,7 @@ export const App = () => (
       <AboutMe path="about-me" />
       <ContactMe path="contact" />
     </Router>
+    <Footer />
     
   </ChakraProvider>
 )
