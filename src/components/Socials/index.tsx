@@ -1,4 +1,7 @@
 import { Box, Text, VStack, HStack, Grid, Image, Link } from "@chakra-ui/react";
+import thanks from "../../images/please.png"
+import right from "../../images/pointing-right.png"
+import left from "../../images/pointing-left.png"
 import insta from "../../images/instagram-dk.svg"
 import tiktok from "../../images/tik-tok-dk.svg"
 import artSt from "../../images/art-dk.svg"
@@ -34,6 +37,7 @@ export const Socials = () => (
             <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={artSt}/></Link>
         </HStack>
       </VStack>
+      <HStack mt={4} justifyContent={"center"}><Text fontSize={14}>Thank you!</Text><Image boxSize="24px" src={thanks}/></HStack>
     </Grid>
  
 );

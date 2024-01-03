@@ -36,7 +36,7 @@ export const Footer = () => {
         w="100%"
         justifyContent={"space-between"}
       >
-        <VStack>
+        <VStack spacing={16}>
           <VStack alignItems={"flex-start"}>
             <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/">
               Portfolio
@@ -65,7 +65,7 @@ export const Footer = () => {
             </Link>
           </VStack>
         </VStack>
-        <VStack>
+        <VStack spacing={16}>
           <VStack alignItems={"flex-start"}>
             <Link
               fontSize={30}
@@ -82,7 +82,7 @@ export const Footer = () => {
               Commission Enquiry
             </Link>
           </VStack>
-          <VStack alignItems={"flex-start"}>
+          <VStack w={"100%"} alignItems={"flex-start"}>
             <Link fontSize={30} fontFamily={"serif"} as={ReachLink} to="/Shop">
               Shop
             </Link>
