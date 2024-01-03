@@ -1,6 +1,6 @@
 import { Box, Flex, Text, VStack, Grid, Image,  useColorModeValue } from "@chakra-ui/react";
 
-import { ContactInfo } from "../../components/ContactInfo"
+import { Socials } from "../../components/Socials"
 import ContactForm from "../../components/ContactForm"
 
 
@@ -19,7 +19,7 @@ return(
         zIndex={21} mt={"-44px!important"} >
           
         </Flex>
-        <ContactInfo />
+        <Socials />
       </VStack>
     </Grid>
   </Box>
