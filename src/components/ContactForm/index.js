@@ -1,66 +1,42 @@
 import { useState } from "react";
-import {
-  Box,
-  VStack,
-  Input,
-  Button
-} from "@chakra-ui/react";
+import { Box, VStack, HStack, Heading, Input, Button, Text, Link} from "@chakra-ui/react";
 
 import { useForm } from "react-hook-form";
-import useScript from "./jotform"
-import JotformEmbed from 'react-jotform-embed';
+import useScript from "./jotform";
+import JotformEmbed from "react-jotform-embed";
 
 export default function ContactForm() {
   const { register, handleSubmit } = useForm();
   // const onSubmit = (data:any) => {
   //   console.log(data);
   //  };
- 
-  
+  const [commision, setCommision] = useState(0);
+  const [title, setTitle] = useState(1);
+  function handleDisplay(x){
+    setCommision(x)
+    setTitle(0)
+  }
   return (
-    <JotformEmbed src="https://form.jotform.com/221265818512050" />
-   
-    // <Box w={[300, 400, 500]} textAlign="center" fontSize="xl">
-    // <form action="https://public.herotofu.com/v1/4e3547b0-cee5-11ec-a821-6590c8b23a22" method="post">
-    //   <VStack spacing={6} >
+    <Box>
+       {title ? <Box>
+          <Heading>What can I do for you?</Heading>
+          <HStack pb={8}>
+            <Button onClick={() => handleDisplay(1)}>
+              I would like a commision
+            </Button>
+            <Button onClick={() => handleDisplay(0)}>I need something else</Button>
+          </HStack>
+        </Box>
+      :
+      <Box>{commision ? 
+        <VStack>
+        <Text>Please fillout the commision form below:</Text>
+        <JotformEmbed src="https://form.jotform.com/221265818512050" />
+        </VStack>
+       : 
+        <Text pb={12}>For all other inqueries, please email me directly at: <Link color={"#ff9437"}>blendedbirch@gmail.com</Link>.</Text>
       
-    //      <Input
-    //        type="text"
-    //        placeholder="First name"
-    //        {...register("firstname", {
-    //          required: "Please enter first name",
-    //          minLength: 3,
-    //          maxLength: 80
-    //        })}
-    //      />
-    //      <Input
-    //        type="text"
-    //        placeholder="Last name"
-    //        {...register("lastname", {
-    //          required: "Please enter Last name",
-    //          minLength: 3,
-    //          maxLength: 100
-    //        })}
-    //      />
-    //      <Input
-    //        type="email"
-    //        placeholder="email"
-    //        {...register("email", {
-    //          required: "Please enter email",
-    //        })}
-    //      />
-    //      <Button
-    //        borderRadius="md"
-    //        bg="cyan.600"
-    //        _hover={{ bg: "cyan.200" }}
-    //        variant="ghost"
-    //        type="submit"
-    //      >
-    //        Submit
-    //      </Button>
-
-    //   </VStack>
-    //   </form>
-    // </Box>
+      }</Box>}
+    </Box>
   );
 }

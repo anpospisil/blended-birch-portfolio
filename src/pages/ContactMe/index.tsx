@@ -5,7 +5,7 @@ import ContactForm from "../../components/ContactForm"
 
 
 export const ContactMe = () => {
-  const bg = useColorModeValue("white", "#1A202C")
+  const bg = useColorModeValue("#F4F0F9", "#1A202C")
 return(
 <Box textAlign="center" fontSize="xl">
     <Grid minH="100vh" p={3}>

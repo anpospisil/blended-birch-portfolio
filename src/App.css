@@ -3,6 +3,10 @@ body{
   overflow-x: hidden;
   position: relative;
   min-height: 100vh!important;
+  background-color: #f4f0f9!important;
+}
+a:hover{
+  color: #ff9437;
 }
 .css-zjq1i3{
   margin: auto;
