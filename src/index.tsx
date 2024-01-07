@@ -4,7 +4,22 @@ import ReactDOM from "react-dom"
 import { App } from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBhheNwT-ITnM6OC46NKlBkFow9d_WuqpU",
+  authDomain: "blended-birch.firebaseapp.com",
+  projectId: "blended-birch",
+  storageBucket: "blended-birch.appspot.com",
+  messagingSenderId: "784532453732",
+  appId: "1:784532453732:web:03466e2dcf930b0b86a271",
+  measurementId: "G-KWSPX370JN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 ReactDOM.render(
   <React.StrictMode>

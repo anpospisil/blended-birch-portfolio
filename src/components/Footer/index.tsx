@@ -14,7 +14,6 @@ import {
   HStack,
   VStack,
 } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { Link as ReachLink } from "@reach/router";
 
 import { Socials } from "../Socials";

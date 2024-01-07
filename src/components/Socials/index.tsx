@@ -37,7 +37,7 @@ export const Socials = () => (
             <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={artSt}/></Link>
         </HStack>
       </VStack>
-      <HStack mt={4} justifyContent={"center"}><Text fontSize={14}>Thank you!</Text><Image boxSize="24px" src={thanks}/></HStack>
+      {/* <HStack mt={4} justifyContent={"center"}><Text fontSize={14}>Thank you!</Text><Image boxSize="24px" src={thanks}/></HStack> */}
     </Grid>
  
 );
