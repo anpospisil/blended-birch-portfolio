@@ -1,4 +1,4 @@
-import { Box, Text, VStack, HStack, Grid, Image, Link } from "@chakra-ui/react";
+import { Box, Text, VStack, HStack, Grid, Image, Link, Heading, useColorMode } from "@chakra-ui/react";
 import thanks from "../../images/please.png"
 import right from "../../images/pointing-right.png"
 import left from "../../images/pointing-left.png"
@@ -12,17 +12,24 @@ import tiktokLt from "../../images/tik-tok-lt.svg"
 import artStLt from "../../images/art-lt.svg"
 import coffeeLt from "../../images/coffee-lt.svg"
 import patreonLt from "../../images/patreon-lt.svg"
-export const Socials = () => (
-  
-    <Grid minH="auto" >
-      <VStack alignItems={"center"} spacing={5}>
-        <Text fontSize={30} fontFamily={"serif"} textAlign={"left"}>
-         Support
-        </Text>
+import heartLt from "../../images/heartLt.svg"
+import heartDk from "../../images/heartDk.svg"
+
+
+
+export const Socials = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
+  return(
+   <Grid minH="auto" >
+      <VStack alignItems={"flex-start"} spacing={5} m={0} >
+        <Heading display={"flex"} gap={2} alignItems={"flex-end"} fontSize={30} textAlign={"left"}>
+         Support <Image w={10} src={colorMode === "light" ? heartDk : heartLt} />
+        </Heading>
         <VStack alignItems={"flex-start"} spacing='16px'>
           <HStack alignItems={"flex-end"} spacing='16px'>
            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={coffee}/></Link>
-           <Link fontSize={[16, 16, 16, 18]} href="https://www.instagram.com/blendedbirch/">Buy me a coffee</Link>
+           <Link fontSize={[16, 16, 16, 18]} href="https://www.instagram.com/blendedbirch/">Buy me a coffee </Link>
            </HStack>
            <HStack alignItems={"flex-end"}  spacing='16px'>
        
@@ -30,7 +37,7 @@ export const Socials = () => (
             <Link fontSize={[16, 16, 16, 18]} href="https://www.instagram.com/blendedbirch/">Become a Patron </Link>
             </HStack>
         </VStack>
-        <Text fontSize={30}  fontFamily={"serif"}>Follow</Text>
+        <Heading display={"flex"}  gap={2} alignItems={"flex-end"} fontSize={30} >Follow <Image w={10} src={colorMode === "light" ? heartDk : heartLt} /></Heading>
         <HStack spacing='16px' >
             <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={tiktok}/></Link>
             <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={insta}/></Link>
@@ -40,4 +47,4 @@ export const Socials = () => (
       {/* <HStack mt={4} justifyContent={"center"}><Text fontSize={14}>Thank you!</Text><Image boxSize="24px" src={thanks}/></HStack> */}
     </Grid>
  
-);
+);}

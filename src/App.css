@@ -3,11 +3,20 @@ body{
   overflow-x: hidden;
   position: relative;
   min-height: 100vh!important;
-  background-color: #f4f0f9!important;
+
+  font-family: 'Roboto', sans-serif;
 }
-a:hover{
-  color: #ff9437;
+h1, h2, h3, h4{
+font-family: "Major Mono Display", monospace!important;
+font-weight: 700!important;
 }
+
+a{
+
+  text-decoration: none;
+  font-size: 18px;
+}
+
 .css-zjq1i3{
   margin: auto;
 }

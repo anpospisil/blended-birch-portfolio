@@ -12,39 +12,48 @@ import {
   Stack,
   Image,
   HStack,
+  Text
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { Link as ReachLink } from "@reach/router";
-
+import woodLt from "../../images/woodLt.svg"
+import woodDk from "../../images/woodDk.svg"
 import bbLogo from "../../bb-logo.jpeg";
 
 export const Navbar = () => {
   const [display, changeDisplay] = useState("none");
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
    
     <Flex
-      bg={useColorModeValue("#D6FFE9", "#25332B")}
-      px={[4, 4, 4, 14]}
+      bg={useColorModeValue("#eafff4", "#007f68")}
+      bgImage={colorMode === "light" ? woodLt : woodDk}
+      
       mb={20}
       w="100%"
       h={16}
-      alignItems={"center"}
-      justifyContent={"space-between"}
+      // alignItems={"center"}
+    
     >
+      <HStack w={"100%"} m={"0 auto"}
+        justifyContent={"space-between"}
+        px={[4, 4, 4, 14]}
+      maxW="1400px"
+      > 
       {/* Logo */}
       <HStack justifySelf={"flex-start"} fontFamily={"serif"}>
-        <Link as={ReachLink} to="/">
+        {/* <Link as={ReachLink} to="/">
         <Image w={10} src={bbLogo} />
-        </Link>
-        <Link   _hover={{ textDecoration: "none" }} as={ReachLink} to="/">
-        <Box>BLENDED BIRCH</Box>
+        </Link> */}
+        <Link _hover={{ textDecoration: "none" }} as={ReachLink} to="/">
+        <Text fontSize={"32px"} fontFamily={"Major Mono Display, monospace"} fontWeight="700">Blended Birch</Text>
         </Link> 
       </HStack>
 
       {/* Desktop */}
       <Flex display={["none", "none", "flex", "flex"]} justifySelf={"flex-end"} marginLeft={"auto"} alignItems={"center"}>
-        <Stack direction={"row"} alignItems={"center"} spacing={7}>
+        <Stack  direction={"row"} alignItems={"center"} spacing={7}>
           <Link as={ReachLink} to="/">
             Portfolio
           </Link>
@@ -58,8 +67,10 @@ export const Navbar = () => {
             Shop
           </Link>
         </Stack>
+        <ColorModeSwitcher />
       </Flex>
-
+    
+      </HStack>
       {/* Mobile */}
      
 
@@ -112,7 +123,6 @@ export const Navbar = () => {
           display={["flex", "flex", "none", "none"]}
         />
      
-      <ColorModeSwitcher />
       </Flex>
     </Flex>
   );
