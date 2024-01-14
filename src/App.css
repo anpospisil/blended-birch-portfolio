@@ -24,6 +24,24 @@ a{
   padding-bottom: 28em;
 }
 
+/* .react-photo-gallery--gallery {
+  width: 100%;
+  height: auto;
+}
+
+.react-photo-gallery--gallery img {
+  width: 50%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .react-photo-gallery--gallery img {
+  max-height: 100vh;
+} */
+
 /* .galleryContainer {
   white-space: nowrap;
     overflow-x: scroll;
