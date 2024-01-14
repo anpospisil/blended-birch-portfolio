@@ -92,7 +92,7 @@ export const Footer = () => {
             </Link>
           </VStack>
           <VStack w={"100%"} alignItems={"flex-start"}>
-          <Heading><Heading></Heading><Link fontSize={30}  as={ReachLink} to="/Shop">
+          <Heading><Link fontSize={30}  as={ReachLink} to="/Shop">
               Shop
             </Link></Heading>
             <Link as={ReachLink} to="/">

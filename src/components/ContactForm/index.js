@@ -4,7 +4,8 @@ import { Box, VStack, HStack, Heading, Input, Button, Text, Link} from "@chakra-
 import { useForm } from "react-hook-form";
 import useScript from "./jotform";
 import JotformEmbed from "react-jotform-embed";
-
+import { PrimaryButton } from "../PrimaryButton";
+import { SecondaryButton } from "../SecondaryButton";
 export default function ContactForm() {
   const { register, handleSubmit } = useForm();
   // const onSubmit = (data:any) => {
@@ -19,12 +20,17 @@ export default function ContactForm() {
   return (
     <Box>
        {title ? <Box>
-          <Heading>What can I do for you?</Heading>
-          <HStack pb={8}>
+          <Heading>What can i do for you?</Heading>
+          <HStack pb={20}>
+            <PrimaryButton title={"I would like a commision"} />
+           
             <Button onClick={() => handleDisplay(1)}>
-              I would like a commision
+           
             </Button>
-            <Button onClick={() => handleDisplay(0)}>I need something else</Button>
+           
+            <SecondaryButton title={"I need something else"} />
+           
+            <Button onClick={() => handleDisplay(0)}></Button>
           </HStack>
         </Box>
       :

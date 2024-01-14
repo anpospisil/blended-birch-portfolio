@@ -29,7 +29,7 @@ export const Navbar = () => {
     <Flex
       bg={useColorModeValue("#eafff4", "#007f68")}
       bgImage={colorMode === "light" ? woodLt : woodDk}
-      
+
       mb={20}
       w="100%"
       h={16}
@@ -77,7 +77,7 @@ export const Navbar = () => {
       <Flex
         w="100vw"
         display={display}
-        bgColor="gray.50"
+        bgColor="transparent"
         zIndex={20}
         h="100vh"
         pos="fixed"
