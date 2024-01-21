@@ -21,30 +21,32 @@ export const Socials = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return(
-   <Grid minH="auto" >
-      <VStack alignItems={"flex-start"} spacing={5} m={0} >
-        <Heading display={"flex"} gap={2} alignItems={"flex-end"} fontSize={30} textAlign={"left"}>
-         Support <Image w={10} src={colorMode === "light" ? heartDk : heartLt} />
+   <Grid minH="auto">
+      <VStack className="social-links" alignItems={"flex-start"} spacing={8}>
+        <VStack spacing={5} m={0} >
+        <Heading className="heart-container"   display={"flex"} gap={2} alignItems={"flex-end"} fontSize={30} textAlign={"left"}>
+         Support <Image  className="heart" w={10} src={colorMode === "light" ? heartDk : heartLt} />
         </Heading>
         <VStack alignItems={"flex-start"} spacing='16px'>
-          <HStack alignItems={"flex-end"} spacing='16px'>
-           <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={coffee}/></Link>
-           <Link fontSize={[16, 16, 16, 18]} href="https://www.instagram.com/blendedbirch/">Buy me a coffee </Link>
-           </HStack>
-           <HStack alignItems={"flex-end"}  spacing='16px'>
-       
-            <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={patreon}/></Link>
-            <Link fontSize={[16, 16, 16, 18]} href="https://www.instagram.com/blendedbirch/">Become a Patron </Link>
-            </HStack>
+        
+  
+            <Link display="flex" gap={2} alignItems={"flex-end"} href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={colorMode === "light" ? patreon : patreonLt}/>Become a Patron </Link>
+          
+           <Link display="flex" gap={2} alignItems={"flex-end"} href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={colorMode === "light" ? coffee : coffeeLt}/>Buy me a coffee </Link>
+           
         </VStack>
-        <Heading display={"flex"}  gap={2} alignItems={"flex-end"} fontSize={30} >Follow <Image w={10} src={colorMode === "light" ? heartDk : heartLt} /></Heading>
+
+
+        </VStack>
+        <VStack  alignItems={"flex-start"} spacing={5} m={0} >
+        <Heading className="heart-container" display={"flex"}  gap={2} alignItems={"flex-end"} fontSize={30} >Follow <Image className="heart" w={10} src={colorMode === "light" ? heartDk : heartLt} /></Heading>
         <HStack spacing='16px' >
-            <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={tiktok}/></Link>
-            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={insta}/></Link>
-            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={artSt}/></Link>
+            <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={colorMode === "light" ? tiktok : tiktokLt}/></Link>
+            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={colorMode === "light" ? insta : instaLt}/></Link>
+            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={colorMode === "light" ? artSt : artStLt}/></Link>
         </HStack>
+        </VStack>
       </VStack>
-      {/* <HStack mt={4} justifyContent={"center"}><Text fontSize={14}>Thank you!</Text><Image boxSize="24px" src={thanks}/></HStack> */}
     </Grid>
  
 );}

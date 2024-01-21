@@ -23,48 +23,23 @@ a{
 #root{
   padding-bottom: 28em;
 }
-
-/* .react-photo-gallery--gallery {
-  width: 100%;
-  height: auto;
+.social-links a img{
+  transition: all 0.25s;
 }
-
-.react-photo-gallery--gallery img {
-  width: 50%;
-  height: auto;
-  max-height: 100vh;
-  object-fit: cover;
-  overflow: hidden;
-  object-position: center center;
+.social-links a:hover img{
+transform: scale(1.2);
 }
-
-.fullscreen .react-photo-gallery--gallery img {
-  max-height: 100vh;
-} */
-
-/* .galleryContainer {
-  white-space: nowrap;
-    overflow-x: scroll;
-    overflow-x: hidden; 
-    scroll-snap-type: x proximity;
-    height: 100%;
-    width: 100%;
+.heart-container:hover .heart{
+  animation: heartbeat 0.75s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
   }
-.react-photo-gallery--gallery div {
-  flex-flow: nowrap !important;
-  height: 100%;
-  align-items: center;
+  25%, 75% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
 }
-.react-photo-gallery--gallery div img{
-  height: 100%;
-  width: 100%;
-  
-} */
-
-/* .items{
-  height: auto;
-  display: inline-flex;
-  float: left;
-  width: 100%;  
-}; */
-
