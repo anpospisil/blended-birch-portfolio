@@ -23,7 +23,7 @@ export const Socials = () => {
   return(
    <Grid minH="auto">
       <VStack className="social-links" alignItems={"flex-start"} spacing={8}>
-        <VStack spacing={5} m={0} >
+        <VStack spacing={5} m={0} alignItems={"flex-start"}>
         <Heading className="heart-container"   display={"flex"} gap={2} alignItems={"flex-end"} fontSize={30} textAlign={"left"}>
          Support <Image  className="heart" w={10} src={colorMode === "light" ? heartDk : heartLt} />
         </Heading>

@@ -85,7 +85,7 @@ export const Footer = () => {
               Contact
             </Link></Heading>
             <Link as={ReachLink} to="/">
-              Contact form
+              Contact info
             </Link>
             <Link as={ReachLink} to="/">
               Commission Enquiry

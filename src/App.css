@@ -15,8 +15,11 @@ a{
 
   text-decoration: none;
   font-size: 18px;
+  
 }
-
+.first-ltrs{
+  text-shadow: 2px 2px #c15B75;
+}
 .css-zjq1i3{
   margin: auto;
 }
@@ -41,5 +44,12 @@ transform: scale(1.2);
   }
   50% {
     transform: scale(1);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #logo .mobile{
+    display: none;
   }
 }

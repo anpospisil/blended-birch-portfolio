@@ -47,7 +47,7 @@ export const Navbar = () => {
         <Image w={10} src={bbLogo} />
         </Link> */}
         <Link _hover={{ textDecoration: "none" }} as={ReachLink} to="/">
-        <Text fontSize={"32px"} fontFamily={"Major Mono Display, monospace"} fontWeight="700">Blended Birch</Text>
+        <Text id="logo" fontSize={"32px"} fontFamily={"Major Mono Display, monospace"} fontWeight="700"><span className="first-ltrs">B</span><span className="mobile">lended</span><span className="mobile">&nbsp;</span><span className="first-ltrs">B</span><span className="mobile">irch</span></Text>
         </Link> 
       </HStack>
 
