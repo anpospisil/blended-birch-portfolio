@@ -4,6 +4,7 @@ export const SecondaryButton = (props) => {
 
   return(
     <Button
+    onClick={props.onClick}
     bg={"transparent"}
     padding="1em 2em" 
        borderRadius="40px" 

@@ -22,15 +22,10 @@ export default function ContactForm() {
        {title ? <Box>
           <Heading>What can i do for you?</Heading>
           <HStack pb={20}>
-            <PrimaryButton title={"I would like a commision"} />
+            <PrimaryButton onClick={() => handleDisplay(1)} title={"I would like a commision"} />
+                      
+            <SecondaryButton onClick={() => handleDisplay(0)} title={"I need something else"} />
            
-            <Button onClick={() => handleDisplay(1)}>
-           
-            </Button>
-           
-            <SecondaryButton title={"I need something else"} />
-           
-            <Button onClick={() => handleDisplay(0)}></Button>
           </HStack>
         </Box>
       :

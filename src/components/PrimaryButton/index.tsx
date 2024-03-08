@@ -5,6 +5,7 @@ export const PrimaryButton = (props) => {
  
   return(
  <Button
+ onClick={props.onClick}
  bg={useColorModeValue("#007f68", "#eafff4")}
  padding="1em 2em" 
     borderRadius="40px" 
