@@ -13,43 +13,40 @@ import {
   Image,
   HStack,
   VStack,
-  Heading
+  Heading,
 } from "@chakra-ui/react";
 
 import { Link as ReachLink } from "@reach/router";
 import { Socials } from "../Socials";
 
-import woodLt from "../../images/woodLt.svg"
-import woodDk from "../../images/woodDk.svg"
+import woodLt from "../../images/woodLt.svg";
+import woodDk from "../../images/woodDk.svg";
 export const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
-    bg={useColorModeValue("#eafff4", "#007f68")}
+      bg={useColorModeValue("#eafff4", "#007f68")}
       bgImage={colorMode === "light" ? woodLt : woodDk}
-      position="absolute"
-      bottom="0"
-      w="100%"
-      h="24em"
+      mt={"auto"}
+      py={16}
       alignItems={"center"}
-     
-      
     >
       <Stack
-        direction={"row"}
+        direction={["column", "column", "row", "row"]}
         alignItems={"flex-start"}
-        
         px={[4, 4, 4, 14]}
         w="100%"
         maxW={"1400px"}
         m={"0 auto"}
         justifyContent={"space-between"}
       >
-        <VStack m={0} spacing={16}  alignItems={"flex-start"}>
-          <VStack alignItems={"flex-start"} >
-            <Heading><Link fontSize={30}  as={ReachLink} to="/">
-              Portfolio
-            </Link></Heading>
+        <VStack m={0} spacing={[8, 8, 16, 16]} alignItems={"flex-start"}>
+          <VStack alignItems={"flex-start"}>
+            <Heading>
+              <Link fontSize={30} as={ReachLink} to="/">
+                Portfolio
+              </Link>
+            </Heading>
             <Link as={ReachLink} to="/">
               Digital Paintings
             </Link>
@@ -58,14 +55,11 @@ export const Footer = () => {
             </Link>
           </VStack>
           <VStack alignItems={"flex-start"}>
-          <Heading><Link
-              fontSize={30}
-              
-              as={ReachLink}
-              to="/about-me"
-            >
-              About me
-            </Link></Heading>
+            <Heading>
+              <Link fontSize={30} as={ReachLink} to="/about-me">
+                About me
+              </Link>
+            </Heading>
             <Link as={ReachLink} to="/">
               My story
             </Link>
@@ -73,17 +67,14 @@ export const Footer = () => {
               Socials
             </Link>
           </VStack>
-        </VStack>
-        <VStack spacing={16}>
-          <VStack alignItems={"flex-start"}>
-          <Heading><Link
-              fontSize={30}
-              
-              as={ReachLink}
-              to="/contact"
-            >
-              Contact
-            </Link></Heading>
+        </VStack> 
+        <VStack  spacing={[8, 8, 16, 16]}>
+          <VStack mt={[6, 6, 0, 0]} alignItems={"flex-start"}>
+            <Heading>
+              <Link fontSize={30} as={ReachLink} to="/contact">
+                Contact
+              </Link>
+            </Heading>
             <Link as={ReachLink} to="/">
               Contact info
             </Link>
@@ -92,9 +83,11 @@ export const Footer = () => {
             </Link>
           </VStack>
           <VStack w={"100%"} alignItems={"flex-start"}>
-          <Heading><Link fontSize={30}  as={ReachLink} to="/Shop">
-              Shop
-            </Link></Heading>
+            <Heading>
+              <Link fontSize={30} as={ReachLink} to="/Shop">
+                Shop
+              </Link>
+            </Heading>
             <Link as={ReachLink} to="/">
               New prints
             </Link>
@@ -106,8 +99,10 @@ export const Footer = () => {
             </Link>
           </VStack>
         </VStack>
-        <VStack alignItems={"flex-start"}>
+        <VStack alignItems={"flex-start"} >
+          <Box mt={[6, 6, 0, 0]} >
           <Socials />
+          </Box>
         </VStack>
       </Stack>
     </Flex>

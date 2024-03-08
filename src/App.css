@@ -3,9 +3,13 @@ body{
   overflow-x: hidden;
   position: relative;
   min-height: 100vh!important;
-
   font-family: 'Roboto', sans-serif;
+   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
+
 h1, h2, h3, h4{
 font-family: "Major Mono Display", monospace!important;
 font-weight: 700!important;
@@ -23,9 +27,7 @@ a{
 .css-zjq1i3{
   margin: auto;
 }
-#root{
-  padding-bottom: 28em;
-}
+
 .social-links a img{
   transition: all 0.25s;
 }
