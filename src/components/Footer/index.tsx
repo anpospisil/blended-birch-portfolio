@@ -27,7 +27,7 @@ export const Footer = () => {
     <Flex
       bg={useColorModeValue("#eafff4", "#007f68")}
       bgImage={colorMode === "light" ? woodLt : woodDk}
-      mt={"auto"}
+      mt={20}
       py={16}
       alignItems={"center"}
     >

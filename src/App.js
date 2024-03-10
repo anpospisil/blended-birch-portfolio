@@ -12,7 +12,7 @@ import {Footer} from "./components/Footer"
 import { Portfolio } from "./pages/Portfolio"
 import { AboutMe } from "./pages/AboutMe"
 import { ContactMe } from "./pages/ContactMe"
-// import { Prints } from "./pages/Prints"
+import { Shop } from "./pages/Shop"
 import { Router, RouteComponentProps } from "@reach/router";
 
 
@@ -23,6 +23,7 @@ export const App = () => (
       <Portfolio path="/" />
       <AboutMe path="about-me" />
       <ContactMe path="contact" />
+      <Shop path="shop" />
     </Router>
     <Footer />
     

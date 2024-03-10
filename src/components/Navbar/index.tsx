@@ -63,7 +63,7 @@ export const Navbar = () => {
           <Link as={ReachLink} to="/contact">
             Contact
           </Link>
-          <Link as={ReachLink} to="/Shop">
+          <Link as={ReachLink} to="/shop">
             Shop
           </Link>
         </Stack>

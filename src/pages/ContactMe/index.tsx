@@ -5,10 +5,10 @@ import ContactForm from "../../components/ContactForm"
 
 
 export const ContactMe = () => {
-  const bg = useColorModeValue("#F4F0F9", "#1A202C")
+  const bg = useColorModeValue("#FFF", "#1A202C")
 return(
 <Box textAlign="center" fontSize="xl">
-    <Grid minH="100vh" p={3}>
+    <Grid minH="100vh">
       <VStack spacing={8}>
         <Text textAlign={"left"}>
           Contact

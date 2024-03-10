@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, VStack, HStack, Heading, Input, Button, Text, Link} from "@chakra-ui/react";
+import { Box, VStack, Stack, Heading, Input, Button, Text, Link} from "@chakra-ui/react";
 
 import { useForm } from "react-hook-form";
 import useScript from "./jotform";
@@ -18,22 +18,19 @@ export default function ContactForm() {
     setTitle(0)
   }
   return (
-    <Box>
-       {title ? <Box>
+    <Box w={"100%"}>
+       {title ? <Box display={"flex"} flexDirection={"column"}>
           <Heading>What can i do for you?</Heading>
-          <HStack pb={20}>
+          <Box pb={20} pt={8} m={6} display={"flex"} gap={4} flexDirection={["column", "column", "row", "row" ]} justifyContent={"center"}>
             <PrimaryButton onClick={() => handleDisplay(1)} title={"I would like a commision"} />
                       
             <SecondaryButton onClick={() => handleDisplay(0)} title={"I need something else"} />
            
-          </HStack>
+          </Box>
         </Box>
       :
-      <Box>{commision ? 
-        <VStack>
-        <Text>Please fillout the commision form below:</Text>
-        <JotformEmbed src="https://form.jotform.com/221265818512050" />
-        </VStack>
+      <Box w={"100%"}>{commision ? 
+               <JotformEmbed src="https://form.jotform.com/221212960317346" />
        : 
         <Text pb={12}>For all other inqueries, please email me directly at: <Link color={"#ff9437"}>blendedbirch@gmail.com</Link>.</Text>
       
