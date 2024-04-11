@@ -60,10 +60,10 @@ export const Footer = () => {
                 About me
               </Link>
             </Heading>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/about-me">
               My story
             </Link>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/about-me">
               Socials
             </Link>
           </VStack>
@@ -75,26 +75,26 @@ export const Footer = () => {
                 Contact
               </Link>
             </Heading>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/contact">
               Contact info
             </Link>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/contact">
               Commission Enquiry
             </Link>
           </VStack>
           <VStack w={"100%"} alignItems={"flex-start"}>
             <Heading>
-              <Link fontSize={30} as={ReachLink} to="/Shop">
+              <Link fontSize={30} as={ReachLink} to="/shop">
                 Shop
               </Link>
             </Heading>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/shop">
               New prints
             </Link>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/shop">
               Watercolor prints
             </Link>
-            <Link as={ReachLink} to="/">
+            <Link as={ReachLink} to="/shop">
               Digital prints
             </Link>
           </VStack>
