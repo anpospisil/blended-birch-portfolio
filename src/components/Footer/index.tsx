@@ -25,7 +25,7 @@ export const Footer = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
-      bg={useColorModeValue("#eafff4", "#007f68")}
+      bg={useColorModeValue("#eafff4", "#006653")}
       bgImage={colorMode === "light" ? woodLt : woodDk}
       mt={20}
       py={16}

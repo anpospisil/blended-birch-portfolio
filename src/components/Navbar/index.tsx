@@ -19,7 +19,12 @@ import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { Link as ReachLink } from "@reach/router";
 import woodLt from "../../images/woodLt.svg"
 import woodDk from "../../images/woodDk.svg"
-import bbLogo from "../../bb-logo.jpeg";
+import insta from "../../images/instagram-dk.svg"
+import tiktok from "../../images/tik-tok-dk.svg"
+import artSt from "../../images/art-dk.svg"
+import instaLt from "../../images/instagram-lt.svg"
+import tiktokLt from "../../images/tik-tok-lt.svg"
+import artStLt from "../../images/art-lt.svg"
 
 export const Navbar = () => {
   const [display, changeDisplay] = useState("none");
@@ -27,7 +32,7 @@ export const Navbar = () => {
   return (
    
     <Flex
-      bg={useColorModeValue("#eafff4", "#007f68")}
+      bg={useColorModeValue("#eafff4", "#006653")}
       bgImage={colorMode === "light" ? woodLt : woodDk}
 
       mb={20}
@@ -43,9 +48,6 @@ export const Navbar = () => {
       > 
       {/* Logo */}
       <HStack justifySelf={"flex-start"} fontFamily={"serif"}>
-        {/* <Link as={ReachLink} to="/">
-        <Image w={10} src={bbLogo} />
-        </Link> */}
         <Link _hover={{ textDecoration: "none" }} as={ReachLink} to="/">
         <Text id="logo" fontSize={"32px"} fontFamily={"Major Mono Display, monospace"} fontWeight="700"><span className="first-ltrs">B</span><span className="mobile">lended</span><span className="mobile">&nbsp;</span><span className="first-ltrs">B</span><span className="mobile">irch</span></Text>
         </Link> 
@@ -77,7 +79,8 @@ export const Navbar = () => {
       <Flex
         w="100vw"
         display={display}
-        bgColor="transparent"
+        bgColor="#1a202c"
+        opacity={"0.9"}
         zIndex={20}
         h="100vh"
         pos="fixed"
@@ -97,21 +100,27 @@ export const Navbar = () => {
           />
         </Flex>
 
-        <Flex flexDir="column" align="center">
-          <Link as={ReachLink} to="/">
+        <Flex flexDir="column" align="center" gap={3} h={"100%"}>
+          <Link fontSize={32} as={ReachLink} to="/">
             Portfolio
           </Link>
-          <Link as={ReachLink} to="/about-me">
+          <Link fontSize={32}  as={ReachLink} to="/about-me">
             About me
           </Link>
          
-          <Link as={ReachLink} to="/contact">
+          <Link fontSize={32}  as={ReachLink} to="/contact">
             Contact
           </Link>
-          <Link as={ReachLink} to="/shop">
+          <Link fontSize={32}  as={ReachLink} to="/shop">
             Shop
           </Link>
+          <HStack justifySelf={"flex-end"} gap={8} mt={"auto"} mb={8}>
+            <Link href="https://www.tiktok.com/@blendedbirch"><Image boxSize="32px" src={colorMode === "light" ? tiktok : tiktokLt}/></Link>
+            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={colorMode === "light" ? insta : instaLt}/></Link>
+            <Link href="https://www.instagram.com/blendedbirch/"><Image boxSize="32px" src={colorMode === "light" ? artSt : artStLt}/></Link>
+        </HStack>
         </Flex>
+       
       </Flex>
       <Flex justifyItems={"flex-end"} alignItems={"center"}>
         <IconButton
