@@ -20,3 +20,15 @@ A single-page React app featuring an About Me section, an artwork portfolio gall
 ## Getting Started
 
 ```bash
+npm install
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Build & Deploy
+
+```bash
+npm run build
+firebase deploy
+```
