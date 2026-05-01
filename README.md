@@ -4,7 +4,7 @@ A portfolio site built for a digital artist to showcase their work and make it e
 
 ## Live Site
 
-[View it here](https://blended-birch.web.app/shop){:target="_blank"}
+[View it here](https://blended-birch.web.app/shop)
 
 ## About
 
